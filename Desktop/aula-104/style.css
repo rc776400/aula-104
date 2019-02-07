@@ -1,0 +1,68 @@
+body {
+    margin:o;
+}
+nav{
+    width: 100wv;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+
+}
+
+nav img {
+    width: 30px;
+}
+
+nav ul{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16pt;
+}
+
+#main{
+    /* cria grid  */
+    display:grid;
+    grid-template-areas: "header header header"
+                         "section section section"
+                         "section section section"
+                         "footer footer footer";
+                         /* define tamanho das linhas */
+    grid-auto-rows: 50px 250px 100px 80px;
+}
+/* configura colunas e linhas do grid */
+header{
+    grid-area: header;
+    background-color: blue;
+}
+
+section {
+    background-color: green;
+    grid-area: section;
+}
+
+footer {
+    grid-area: footer;
+    background-color: black;
+}
+
+/* configura com */
+@media (min-width:768px){
+    nav img{
+        display:none;
+    }
+    nav ul{
+        display:flex;
+    }
+}
+
+nav a {
+    font-size: 14pt;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-around
+}
